@@ -46,6 +46,9 @@ def dict_a_df(obs, columnas, dtypes):
 
 app = Flask(__name__)
 
+@app.route('/',methods=['GET'])
+def home():
+    return "HOla Mundo"
 
 @app.route('/predecir', methods=['POST'])
 def predecir():
